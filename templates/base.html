@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css_files %} {%endblock%}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg">
+        <div class="container">
+          <a class ="navbar-brand" href="">
+            <img src="./static/img/mudek.jpg" alt="" width="60" height="60">
+          </a>
+          <a class="navbar-brand" href="">Müdek Arşiv</a>
+          <ul class="navbar-nav me-auto">
+            <li class=" nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/adminlogin/?next=/admin">Home</a>
+            </li>
+            <li class=" nav-item">
+                <a class="nav-link" href="">Mudeks</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+
+    {% block content %}{% endblock %}
+
+    <script>src="{% static 'js/bootstrap.min.js' %}"</script>
+    <script>src="{% static 'js/base.js' %}"</script>
+    {% block js_files %}{% endblock %}
+</body>
+</html>

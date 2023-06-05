@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %} 
+    <link rel="stylesheet" href="{static 'mudek/style.css'}">
+{%endblock%}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<h1>HomePage</h1>
+{% endblock %}
+
+{% block js_files %}
+    <script>src="{% static 'mudek/js/script.js' %}"</script>
+{% endblock %}
